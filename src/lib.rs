@@ -1,4 +1,5 @@
-#[cxx::bridge(namespace = flac)]
+                use std::fs::File;
+#[cxx::bridge]
 mod ffi {
 
             extern "C" {
@@ -8,7 +9,7 @@ mod ffi {
                 // include!("lib-flac/include/share/compat.h");
                 include!("lib-flac/src/flac/encode.h");
 
-                fn encode_file() -> bool;
+                fn encode_file(file: std::fs::File) -> bool;
             }
 }
 

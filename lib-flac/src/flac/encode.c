@@ -952,7 +952,7 @@ static FLAC__bool get_sample_info_flac(EncoderSession *e)
 /*
  * public routines
  */
-int flac__encode_file(FILE *infile, FLAC__off_t infilesize, const char *infilename, const char *outfilename, const FLAC__byte *lookahead, uint32_t lookahead_length, encode_options_t options)
+int encode_file(FILE *infile, FLAC__off_t infilesize, const char *infilename, const char *outfilename, const FLAC__byte *lookahead, uint32_t lookahead_length, encode_options_t options)
 {
 	EncoderSession encoder_session;
 	size_t channel_map[FLAC__MAX_CHANNELS];
